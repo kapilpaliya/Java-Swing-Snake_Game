@@ -19,11 +19,16 @@ public class Snake_Game extends JPanel implements ActionListener, KeyListener {
     private boolean left = false;  private boolean right = true;  private boolean up = false;  private boolean down = false;
 
     //Variable Declaration For Snake Length, (in X-Direction) & (in Y-Direction)
-    private int lengthOfSnake=3;  private final int[] snakexlength=new int[850];   private final int[] snakeylength=new int[625];
+    private int lengthOfSnake=3;  private final int[] snakexlength=new int[850]; private final int[] snakeylength=new int[625];
 
     //Variable Declaration For Apple Position On X-Direction & Y-Direction
-    private final int[] xpos = {25,50,75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850};
-    private final int[] ypos = {75,100,125,150,175,200,225,250,275,300,325,350,375,400,425,450,475,500,525,550,575,600,625};
+    private final int[] xpos = {25,50,75,100,125,150,175,200,225,250,
+                                275,300,325,350,375,400,425,450,475,500,
+                                525,550,575,600,625,650,675,700,725,750,
+                                775,800,825,850};
+    private final int[] ypos = {75,100,125,150,175,200,225,250,275,300,
+                                325,350,375,400,425,450,475,500,525,550,
+                                575,600,625};
     private int enemyX,enemyY;
 
     //Variable Declaration For Des-Bord
@@ -239,6 +244,7 @@ public class Snake_Game extends JPanel implements ActionListener, KeyListener {
         f.setBounds(300,20,905,700);
         f.setResizable(false);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
         //Add Panel
         Snake_Game panel = new Snake_Game();
